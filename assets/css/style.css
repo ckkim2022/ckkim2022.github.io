@@ -1,13 +1,4 @@
-/**
-* Template Name: Imperial - v5.10.0
-* Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   background: #fff;
   color: #666666;
@@ -1108,6 +1099,8 @@ section {
   color:#CB2308;
 }
 .project-list{
+    margin-left: -33px !important;
+
   list-style: none;
 }
 .project-list li{
