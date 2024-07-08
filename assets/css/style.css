@@ -100,6 +100,12 @@ h6 {
   background-size: cover;
 }
 
+.hero2 {
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("../img/projectbg.jpg") fixed !important;
+    background-size: cover !important;
+
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -113,7 +119,9 @@ h6 {
 #hero .hero-logo img {
   max-width: 30%;
 }
-
+.pm{
+  margin-top: -30px !important;
+}
 #hero .hero-container {
 /*  background: white;*/
   display: table-cell;
@@ -176,6 +184,18 @@ h6 {
   border-radius: 2px;
   transition: 0.5s;
   margin: 10px;
+}
+
+.mybtn {
+  background: #03b0c0;
+  border: 2px solid #03b0c0;
+  color: #fff;
+}
+
+.mybtn:hover {
+  border: 2px solid black;
+  color: black;
+  background: white;
 }
 
 #hero .btn-get-started {
@@ -619,7 +639,7 @@ section {
 /* Subscribe Section
 --------------------------------*/
 #subscribe {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/subscribe-bg.jpg) fixed center center;
+  background: rgba(33, 166, 160, 0.9);
   background-size: cover;
   padding: 80px 0;
 }
