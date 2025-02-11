@@ -111,7 +111,9 @@ h6 {
     max-width: 40%;
   }
 }
-
+.text-justify{
+  text-align: justify;
+}
 /*--------------------------------------------------------------
 # Welcome
 --------------------------------------------------------------*/
@@ -125,6 +127,12 @@ h6 {
 
 .hero2 {
   background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("../img/projectbg.jpg") fixed !important;
+    background-size: cover !important;
+
+}
+
+.hero3 {
+  background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), url("../img/programmingcon.jpg") fixed !important;
     background-size: cover !important;
 
 }
@@ -1175,6 +1183,11 @@ section {
   color:white;
 }
 .proimg{
+  width:72%;
+  border-radius: 15px;
+}
+.proimg2{
+width:72%;
   border-radius: 15px;
 }
 .text-black{
