@@ -39,7 +39,23 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    @media (max-width: 768px) {
+/*  .hero-container h1,*/
+  .hero-container h2 {
+    display: none; 
 
+  }
+.hero-container h1{
+  margin-bottom: 15px !important;
+  font-size:25px !important;
+}
+  .hero-logo img {
+    max-width: 70% !important;
+    margin-bottom: 15px;
+  }
+}
+  </style>
 </head>
 
 <body>
@@ -51,9 +67,10 @@
         <div class="hero-logo">
           <img class="back-white" src="assets/img/logo.png" alt="Imperial">
         </div>
-
+        <!-- <div class="hero-container mx-auto text-center"> -->
         <h1 class="text-dark">Reimagine your business process</h1>
         <h2><span class="typed text-dark" data-typed-items="Transform Your Business, Bring efficiency with digital technologies"></span></h2>
+        <!-- </div> -->
         <div class="actions">
           <a href="#about" class="btn-get-started">About Us</a>
           <a href="#services" class="btn-services">Our Services</a>
@@ -91,8 +108,10 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-md-12">
+            <div>
             <h3 class="section-title">Find innovative solutions with our <span class="xprtis"> expertise </span></h3>
             <div class="section-title-divider"></div>
+          </div>
             <!-- <p class="section-description">Find innovative solutions with our expertise</p> -->
           </div>
         </div>
