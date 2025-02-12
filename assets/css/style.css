@@ -420,7 +420,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: black;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -455,6 +455,14 @@ h6 {
   top: 15px;
   right: 15px;
 }
+
+
+.navbar-mobile .mobile-nav-toggle.bi-x {
+  position: absolute;
+  top: 65px !important;
+  right: 20px;
+}
+
 
 .navbar-mobile ul {
   display: block;
