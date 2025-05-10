@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Xprtis</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    @media (max-width: 768px) {
+/*  .hero-container h1,*/
+  .hero-container h2 {
+    display: none; 
+
+  }
+.hero-container h1{
+  margin-bottom: 15px !important;
+  font-size:25px !important;
+}
+  .hero-logo img {
+    max-width: 70% !important;
+    margin-bottom: 15px;
+  }
+}
+
+#hero .hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  height: 100%;
+  padding-left: 5%; 
+  text-align: left;
+}
+
+#hero h1,
+#hero h2,
+#hero .actions,
+#hero .hero-logo {
+  text-align: left !important;
+}
+
+#vanta-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(4, 176, 192, 0.1) 25%,
+    rgba(4, 176, 192, 0.2) 50%,
+    rgba(0, 140, 160, 0.3) 75%,
+    rgba(0, 100, 140, 0.3) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-services {
+  background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+  padding: 80px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.section-services .intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-services .intro h2 {
+  font-size: 2.4rem;
+  color: #001f3f;
+  font-weight: 700;
+}
+
+.section-services .intro p {
+  color: #4a5568;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.intro{
+    text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.section-services .card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.section-services .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.section-services .card .icon {
+  font-size: 2.4rem;
+  color: #03b0c0;
+  margin: 0 auto 20px auto;
+  background: rgba(3, 176, 192, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.section-services .card h3 {
+  font-size: 1.4rem;
+  color: #002244;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.section-services .card p {
+  font-size: 1rem;
+  color: #555e6e;
+}
+.section-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #001f3f;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.section-subtext {
+  font-size: 1.00rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<section id="hero" style="position: relative; height: 100vh; overflow: hidden;">
+  <div id="vanta-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+  <div id="vanta-gradient-overlay"></div>
+
+  <div class="hero-container" style="position: relative; z-index: 1;">
+    <div class="hero-logo">
+      <img src="assets/img/logo.png" alt="Imperial"  data-aos="zoom-in" data-aos-delay="200">
+    </div>
+    <h1 class="h1-hero pm"  data-aos="fade-up" data-aos-delay="400">Transform Your Business, Bring efficiency with digital technologies</h1>
+    <div class="actions" data-aos="fade-up" data-aos-delay="600">
+      <a href="#about" class="btn-get-started">About Us</a>
+      <a href="#services" class="btn-services ms-3">Our Services</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>
+      <!-- Uncomment below if you prefer to use a text logo -->
+      <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+<li><a class="nav-link scrollto" href="#" data-bs-toggle="modal" data-bs-target="#inspireModal">Inspire Program</a></li>
+                                                            <!-- <li><a class="nav-link scrollto" href="contests.html">Contests</a></li> -->
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+<section id="about" class="about-modern">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+      <!-- Image Column -->
+      <div class="col-lg-6 order-lg-2">
+        <div class="about-img-wrapper">
+          <img src="assets/img/about-img.jpg" alt="About XPRTIS" class="img-fluid rounded shadow-sm" />
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="col-lg-6 order-lg-1">
+        <div class="about-text-wrapper">
+          <h2 class="about-heading">
+            Empowering Progress<br />
+            Through Smart Innovation
+          </h2>
+          <p class="about-lead">
+            At <span class="xprtis">XPRTIS</span>, we redefine what's possible by blending technology with insight. 
+            Our mission is to build solutions that are not only intelligent—but transformative.
+          </p>
+          <p class="about-subtext">
+            We partner with forward-thinking organizations to uncover possibilities, design adaptive systems, and drive long-term value. 
+            Whether it’s through AI, UX, data science, or automation, we craft ecosystems that respond, evolve, and lead.
+          </p>
+          <p class="about-subtext">
+            It's not just about innovation—it’s about measurable impact, built on vision, precision, and deep understanding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="services" class="section-services">
+  <div class="container">
+    <div class="intro" data-aos="fade-up">
+      <h2 class="section-heading">Innovative Solutions, Tailored for You</h2>
+      <p class="section-subtext">
+        At <span class="xprtis">XPRTIS</span>, we don’t just deliver services—we build powerful digital ecosystems that drive transformation, innovation, and measurable success.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon"><i class="bi bi-database"></i></div>
+        <h3>Data Science</h3>
+        <p>Extract insights from vast datasets to enhance business decision-making.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon"><i class="bi bi-motherboard"></i></div>
+        <h3>Machine Learning</h3>
+        <p>Empower systems with predictive intelligence and automation.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon"><i class="bi bi-pencil-fill"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Design seamless digital experiences that users love to engage with.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="400">
+        <div class="icon"><i class="bi bi-window-fullscreen"></i></div>
+        <h3>Web Development</h3>
+        <p>Build scalable platforms equipped with modern web technologies.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="icon"><i class="bi bi-robot"></i></div>
+        <h3>Robotics</h3>
+        <p>Develop smart hardware solutions through digital and physical systems.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="600">
+        <div class="icon"><i class="bi bi-buildings-fill"></i></div>
+        <h3>Business Intelligence</h3>
+        <p>Deliver critical insights that translate data into strategy and action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+       <section id="why-choose-us">
+          <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+              <div class="col-md-12 text-center">
+              <div class="intro">
+      <h2 class="section-heading"><span class="xprtis">XPRTIS</span> INSPIRE PROGRAM</h2>
+
+    </div>
+
+                <p class="section-description">The <span class="xprtis">XPRTIS</span> INSPIRE Program is designed for high school students with a drive for software engineering, data science, robotics, design, and business, giving them hands-on experience in real-world problem-solving. Each year, we handpick students based on their skills, personality, and motivation, connecting them with top-tier projects from our portfolio. Those selected get the chance to collaborate with industry leaders like Samsung’s Chiels and research powerhouses at UC Berkeley and Carnegie Mellon, as well as global organizations like the Red Cross. Through professional, high-impact projects, students gain practical skills, explore fresh ideas, and make meaningful contributions that set the stage for a future in development and beyond.
+                </p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#inspireModal" class="btn mybtn mb-4">Learn More</a>
+              </div>
+            </div>
+          </div>
+    </section>
+
+<!--            <section id="">
+          <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+              <div class="col-md-12 text-center">
+                <h3 class="section-title">XPRTIS INSPIRE PROGRAM</h3>
+
+                <div class="section-title-divider"></div>
+
+                <p class="section-description">The XPRTIS INSPIRE Program is designed for high school students with a drive for software engineering, data science, robotics, design, and business, giving them hands-on experience in real-world problem-solving. Each year, we handpick students based on their skills, personality, and motivation, connecting them with top-tier projects from our portfolio. Those selected get the chance to collaborate with industry leaders like Samsung’s Chiels and research powerhouses at UC Berkeley and Carnegie Mellon, as well as global organizations like the Red Cross. Through professional, high-impact projects, students gain practical skills, explore fresh ideas, and make meaningful contributions that set the stage for a future in development and beyond.
+                </p>
+                <a href="project.html" class="btn mybtn mb-4">Learn More</a>
+              </div>
+            </div>
+          </div>
+    </section> -->
+    
+    <!-- ======= Subscrbe Section ======= -->
+    <section id="subscribe">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-8">
+            <h3 class="subscribe-title">Work with Us</h3>
+            <p class="subscribe-text">Connect with us at XPRTIS. We're here to collaborate, answer your questions, and explore possibilities of working together. Let's make a difference through innovation.</p>
+          </div>
+          <div class="col-md-4 subscribe-btn-container">
+  <a class="subscribe-btn" href="mailto:contact@xprtis.com?subject=Inquiry">Send Message</a>
+
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Subscrbe Section -->
+<!-- Modal -->
+<div class="modal fade" id="inspireModal" tabindex="-1" aria-labelledby="inspireModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content shadow-sm rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="inspireModalLabel">XPRTIS INSPIRE Program</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="alert bg-light border-start border-4 border-warning rounded-3 d-flex align-items-start gap-3 p-3 mb-4">
+          <i class="bi bi-exclamation-triangle-fill text-warning fs-3"></i>
+          <div class="text-dark">
+            <strong class="d-block">Page Renewal in Progress</strong>
+            We're currently renewing this page. Please check back soon!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!--      <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/logo1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/logo2.jpg" class="img-fluid" alt="">
+          </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/logo3.png" class="img-fluid" alt="">
+          </div>
+                              <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/logo4.gif" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+  </main><!-- End #main -->
+ <!--    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="credits">
+
+            Designed by <span class="xprtis">X</span>prtis</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      VANTA.NET({
+        el: "#vanta-bg",
+        color: 0x000000,
+        backgroundColor: 0xffffff,
+        points: 7.0,
+        maxDistance: 25.0,
+        spacing: 20.0,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false
+      });
+    });
+  </script>
+<!--   <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      VANTA.WAVES({
+        el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x22d1dc,
+  shininess: 0.00,
+  waveHeight: 40.00,
+  waveSpeed: 0.40,
+  zoom: 1.04
+      });
+    });
+  </script> -->
+
+</body>
+
+</html>
