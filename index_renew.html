@@ -183,6 +183,70 @@
   margin: 0 auto;
 }
 
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/img/herobg.jpg') center center / cover no-repeat;
+    z-index: -2;
+  }
+
+  canvas#polyCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+
+#scroll-active-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 120vh;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+}
+
+
+.scroll-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(60px); 
+  transition: opacity 0.6s ease-out, transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform, opacity;
+}
+
+
+
+.scroll-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .scroll-text {
+    font-size: 2rem;
+  }
+}
+  .highlightable {
+    opacity: 0;
+    transition: background-color 0.5s ease, color 0.5s ease, opacity 0.6s ease;
+  }
+
+  .scroll-text.visible .highlightable.reveal {
+    background-color: #03b0c0;
+    color: #fff;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    opacity: 1;
+  }
 
   </style>
 </head>
@@ -204,8 +268,6 @@
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -233,6 +295,12 @@
   </header><!-- End Header -->
 
   <main id="main">
+
+
+
+
+
+
 
     <!-- ======= About Section ======= -->
 <section id="about" class="about-modern">
@@ -269,6 +337,131 @@
   </div>
 </section>
 
+<section id="impact" class="py-5" style="background: linear-gradient(135deg, #eef5ff, #ffffff); position: relative;">
+  <div class="container" data-aos="fade-up">
+    <div class="text-center mb-5">
+      <h2 class="section-heading">Our Digital Footprint</h2>
+      <p class="section-subtext">A snapshot of the value we bring through innovation, precision, and partnership.</p>
+    </div>
+
+    <div class="row text-center g-4 justify-content-center">
+      
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
+          <i class="bi bi-folder2-open fs-2 text-info mb-3"></i>
+          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="50">0</span>+</h3>
+          <p class="text-muted mb-0">Completed Projects</p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
+          <i class="bi bi-geo-alt-fill fs-2 text-info mb-3"></i>
+          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="12">0</span></h3>
+          <p class="text-muted mb-0">Countries Served</p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
+          <i class="bi bi-clock-history fs-2 text-info mb-3"></i>
+          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="7">0</span>+</h3>
+          <p class="text-muted mb-0">Years of Excellence</p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
+          <i class="bi bi-globe-americas fs-2 text-info mb-3"></i>
+          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="25">0</span>+</h3>
+          <p class="text-muted mb-0">Global Reach</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="approach" class="py-5" style="position: relative; background: linear-gradient(135deg, #f5f7fa, #ffffff); overflow: hidden;">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+      
+      <!-- Image Column with overlay -->
+      <div class="col-lg-6 position-relative mb-5 mb-lg-0" data-aos="fade-right">
+        <div style="position: relative; z-index: 1;">
+          <img src="assets/img/st1.jpg" class="img-fluid rounded-2 shadow-lg" alt="Strategic Innovation" style="width:92%;">
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle d-none d-md-block" style="z-index: 0; opacity: 0.08;">
+          <i class="bi bi-bar-chart-fill display-1 text-info"></i>
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="display-5 fw-bold mb-4 text-dark" style="font-size: 2rem;">Our Approach</h2>
+        <p class="lead text-muted mb-4">
+          At <strong class="text-info">XPRTIS</strong>, we design change. By merging data, technology, and human-centric design, we co-create the future with organizations across industries.
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="d-flex align-items-start">
+              <div class="icon flex-shrink-0 me-3">
+                <i class="bi bi-puzzle-fill fs-3 text-info"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Insightful Discovery</h6>
+                <p class="small text-muted">We listen, research, and map your pain points and priorities.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="d-flex align-items-start">
+              <div class="icon flex-shrink-0 me-3">
+                <i class="bi bi-cpu-fill fs-3 text-info"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Smart Execution</h6>
+                <p class="small text-muted">We engineer scalable systems and adaptive frameworks with agility.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="d-flex align-items-start">
+              <div class="icon flex-shrink-0 me-3">
+                <i class="bi bi-bounding-box-circles fs-3 text-info"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Design Thinking</h6>
+                <p class="small text-muted">We craft intuitive, user-first experiences with measurable outcomes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="d-flex align-items-start">
+              <div class="icon flex-shrink-0 me-3">
+                <i class="bi bi-graph-up fs-3 text-info"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Outcome Focused</h6>
+                <p class="small text-muted">Every action is aligned with your business growth and KPIs.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <section id="services" class="section-services">
   <div class="container">
@@ -279,73 +472,59 @@
       </p>
     </div>
 
-    <div class="grid">
-      <div class="card" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon"><i class="bi bi-database"></i></div>
-        <h3>Data Science</h3>
-        <p>Extract insights from vast datasets to enhance business decision-making.</p>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="icon"><i class="bi bi-motherboard"></i></div>
-        <h3>Machine Learning</h3>
-        <p>Empower systems with predictive intelligence and automation.</p>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="300">
-        <div class="icon"><i class="bi bi-pencil-fill"></i></div>
-        <h3>UI/UX Design</h3>
-        <p>Design seamless digital experiences that users love to engage with.</p>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="400">
-        <div class="icon"><i class="bi bi-window-fullscreen"></i></div>
-        <h3>Web Development</h3>
-        <p>Build scalable platforms equipped with modern web technologies.</p>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="500">
-        <div class="icon"><i class="bi bi-robot"></i></div>
-        <h3>Robotics</h3>
-        <p>Develop smart hardware solutions through digital and physical systems.</p>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="600">
-        <div class="icon"><i class="bi bi-buildings-fill"></i></div>
-        <h3>Business Intelligence</h3>
-        <p>Deliver critical insights that translate data into strategy and action.</p>
-      </div>
+<div class="row gy-4">
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card h-100 text-center p-4 shadow-sm border-0">
+      <div class="icon mb-3"><i class="bi bi-database fs-2 text-info"></i></div>
+      <h3>Data Science</h3>
+      <p>Extract insights from vast datasets to enhance business decision-making.</p>
     </div>
+  </div>
+  
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+    <div class="card h-100 text-center p-4 shadow-sm border-0">
+      <div class="icon mb-3"><i class="bi bi-motherboard fs-2 text-info"></i></div>
+      <h3>Machine Learning</h3>
+      <p>Empower systems with predictive intelligence and automation.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+    <div class="card h-100 text-center p-4 shadow-sm border-0">
+      <div class="icon mb-3"><i class="bi bi-pencil-fill fs-2 text-info"></i></div>
+      <h3>UI/UX Design</h3>
+      <p>Design seamless digital experiences that users love to engage with.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+    <div class="card h-100 text-center p-4 shadow-sm border-0">
+      <div class="icon mb-3"><i class="bi bi-window-fullscreen fs-2 text-info"></i></div>
+      <h3>Web Development</h3>
+      <p>Build scalable platforms equipped with modern web technologies.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
+    <div class="card h-100 text-center p-4 shadow-sm border-0">
+      <div class="icon mb-3"><i class="bi bi-robot fs-2 text-info"></i></div>
+      <h3>Robotics</h3>
+      <p>Develop smart hardware solutions through digital and physical systems.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card h-100 text-center p-4 shadow-sm border-0">
+      <div class="icon mb-3"><i class="bi bi-buildings-fill fs-2 text-info"></i></div>
+      <h3>Business Intelligence</h3>
+      <p>Deliver critical insights that translate data into strategy and action.</p>
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
-       <section id="why-choose-us">
-          <div class="container">
-            <div class="row justify-content-center" data-aos="fade-up">
-              <div class="col-md-12 text-center">
-              <div class="intro">
-      <h2 class="section-heading"><span class="xprtis">XPRTIS</span> INSPIRE PROGRAM</h2>
-
-    </div>
-
-                <p class="section-description">The <span class="xprtis">XPRTIS</span> INSPIRE Program is designed for high school students with a drive for software engineering, data science, robotics, design, and business, giving them hands-on experience in real-world problem-solving. Each year, we handpick students based on their skills, personality, and motivation, connecting them with top-tier projects from our portfolio. Those selected get the chance to collaborate with industry leaders like Samsung’s Chiels and research powerhouses at UC Berkeley and Carnegie Mellon, as well as global organizations like the Red Cross. Through professional, high-impact projects, students gain practical skills, explore fresh ideas, and make meaningful contributions that set the stage for a future in development and beyond.
-                </p>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#inspireModal" class="btn mybtn mb-4">Learn More</a>
-              </div>
-            </div>
-          </div>
-    </section>
-
-<!--            <section id="">
-          <div class="container">
-            <div class="row justify-content-center" data-aos="fade-up">
-              <div class="col-md-12 text-center">
-                <h3 class="section-title">XPRTIS INSPIRE PROGRAM</h3>
-
-                <div class="section-title-divider"></div>
-
-                <p class="section-description">The XPRTIS INSPIRE Program is designed for high school students with a drive for software engineering, data science, robotics, design, and business, giving them hands-on experience in real-world problem-solving. Each year, we handpick students based on their skills, personality, and motivation, connecting them with top-tier projects from our portfolio. Those selected get the chance to collaborate with industry leaders like Samsung’s Chiels and research powerhouses at UC Berkeley and Carnegie Mellon, as well as global organizations like the Red Cross. Through professional, high-impact projects, students gain practical skills, explore fresh ideas, and make meaningful contributions that set the stage for a future in development and beyond.
-                </p>
-                <a href="project.html" class="btn mybtn mb-4">Learn More</a>
-              </div>
-            </div>
-          </div>
-    </section> -->
     
     <!-- ======= Subscrbe Section ======= -->
     <section id="subscribe">
@@ -385,63 +564,8 @@
 </div>
 
 
-  <!--      <section id="clients" class="clients section-bg">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/logo1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/logo2.jpg" class="img-fluid" alt="">
-          </div>
-
-                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/logo3.png" class="img-fluid" alt="">
-          </div>
-                              <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/logo4.gif" class="img-fluid" alt="">
-          </div>
-        </div>
-
-      </div>
-    </section> -->
   </main><!-- End #main -->
- <!--    <section id="clients" class="clients section-bg">
-      <div class="container">
 
-        <div class="row">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -489,25 +613,52 @@
       });
     });
   </script>
-<!--   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      VANTA.WAVES({
-        el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x22d1dc,
-  shininess: 0.00,
-  waveHeight: 40.00,
-  waveSpeed: 0.40,
-  zoom: 1.04
-      });
+<script>
+  const counters = document.querySelectorAll('.counter');
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute('data-target'));
+      const isDecimal = counter.getAttribute('data-target').includes(".");
+      const suffix = counter.innerText.replace(/[0-9.]/g, '').trim(); // e.g., + or ★
+
+      let count = 0;
+      const increment = target / 120;
+
+      const updateCount = () => {
+        if (count < target) {
+          count += increment;
+          counter.innerText = isDecimal
+            ? count.toFixed(1) + suffix
+            : Math.floor(count) + suffix;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = isDecimal
+            ? target.toFixed(1) + suffix
+            : Math.floor(target) + suffix;
+        }
+      };
+
+      updateCount();
     });
-  </script> -->
+  };
+
+  let started = false;
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('#impact');
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const scrollY = window.scrollY + window.innerHeight;
+
+    if (!started && scrollY > sectionTop + sectionHeight / 4) {
+      started = true;
+      animateCounters();
+    }
+  });
+</script>
+
+
+
 
 </body>
 
