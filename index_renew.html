@@ -247,6 +247,234 @@
     border-radius: 4px;
     opacity: 1;
   }
+.bg-image-text .bg-image-wrap {
+  position: relative;
+  background: url('assets/img/temp1.jpg') center center / cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg-image-text .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 43, 83, 0.5); /* optional dark overlay */
+  z-index: 1;
+}
+
+.bg-image-text .text-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+.value-section {
+  background: linear-gradient(to right, #fff 20%, rgba(4, 176, 192,0.09) 80%);
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.value-text h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000;
+  max-width: 600px;
+  z-index: 3;
+}
+.value-text h2 {
+color:black;
+}
+
+.value-image {
+  position: relative;
+  z-index: 2;
+}
+
+.value-image img {
+  max-height: 400px;
+  width: auto;
+}
+
+.value-section::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 40%;
+  width: 600px;
+  height: 150px;
+  background: rgb(4, 176, 192);
+  transform: rotate(-15deg);
+  z-index: 1;
+  opacity: 0.9;
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+}
+
+@media (max-width: 768px) {
+  .value-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .value-text h2 {
+    font-size: 2rem;
+  }
+
+  .value-section::before {
+    width: 300px;
+    height: 100px;
+    top: 60%;
+    right: 10%;
+  }
+}
+.video-highlight-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.video-headline {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgb(4, 176, 192);
+  margin-bottom: 30px;
+}
+
+.video-headline .highlight-orange {
+  color: #f54e00;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.video-thumbnail {
+  position: relative;
+  max-width: 720px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #f54e00;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.video-btn:hover {
+  background-color: #f54e00;
+  color: #fff;
+  border-color: #f54e00;
+}
+.feature-list-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-img img {
+  max-width: 85%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.feature-img {
+  flex: 1 1 30%;
+  min-width: 300px;
+}
+
+.feature-text {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+
+.feature-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature-text p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.feature-arrow {
+  flex: 0 0 auto;
+  font-size: 3rem;
+  color: rgb(4, 176, 192);
+  margin-left: auto;
+}
+
+.arrow-icon {
+  font-weight: 900;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .feature-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .feature-arrow {
+    margin-top: 20px;
+  }
+}
+.arrow-btn {
+  display: inline-block;
+  font-size: 3rem;
+  color: rgb(4, 176, 192);
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 0.2em 0.4em;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+.arrow-btn:hover {
+  transform: translateX(8px);
+  color: #028c99;
+  border-color: rgb(4, 176, 192);
+}
+
 
   </style>
 </head>
@@ -283,7 +511,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-<li><a class="nav-link scrollto" href="#" data-bs-toggle="modal" data-bs-target="#inspireModal">Inspire Program</a></li>
+<li><a class="nav-link scrollto" href="contests.html">Inspire Program</a></li>
                                                             <!-- <li><a class="nav-link scrollto" href="contests.html">Contests</a></li> -->
 
 
@@ -298,7 +526,83 @@
 
 
 
+<section class="value-section">
+  <div class="container value-wrapper">
+    <div class="value-text" data-aos="fade-right" data-aos-duration="1200">
+      <h2>Explore how to create<br>and protect value</h2>
+      <p class="lead mt-3" style="font-size:1.7rem; ">
+        We help businesses identify growth opportunities and mitigate risks by leveraging innovation, strategy, and technology. <br>
+      </p>
+    </div>
 
+    <div class="value-image" data-aos="fade-left" data-aos-delay="200">
+      <img src="assets/img/temp4.png" alt="Collaboration" class="animated-img mt-5"/>
+    </div>
+  </div>
+</section>
+
+<section class="video-highlight-section">
+  <div class="container text-center">
+    <h2 class="video-headline" data-aos="fade-up">
+      <span style="color: black;">You can</span> unlock new opportunities
+    </h2>
+
+    <div class="video-wrapper mt-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="video-thumbnail">
+        <video controls width="80%" class="mt-4">
+          <source src="assets/img/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="feature-list-section">
+  <div class="container">
+
+    <div class="feature-row" data-aos="fade-up">
+      <div class="feature-img">
+        <img src="assets/img/temp1.jpg" alt="Expert Knowledge">
+      </div>
+      <div class="feature-text">
+        <h3><strong>Trusted industry knowledge</strong></h3>
+        <p>Our deep expertise forms the foundation of industries—helping you make confident, future-ready decisions.</p>
+      </div>
+      <div class="feature-arrow">
+        <a href="contests.html" class="arrow-btn" aria-label="Explore Industry Knowledge">&rarr;</a>
+      </div>
+    </div>
+
+    <div class="feature-row" data-aos="fade-up" data-aos-delay="150">
+      <div class="feature-img">
+        <img src="assets/img/temp3.png" alt="Custom AI Solutions">
+      </div>
+      <div class="feature-text">
+        <h3><strong>AI built for your success</strong></h3>
+        <p>We understand how your business runs—so you can harness AI that fits your exact needs and drives results.</p>
+      </div>
+      <div class="feature-arrow">
+        <a href="contests.html" class="arrow-btn" aria-label="Discover AI Solutions">&rarr;</a>
+      </div>
+    </div>
+
+    <div class="feature-row" data-aos="fade-up" data-aos-delay="300">
+      <div class="feature-img">
+        <img src="assets/img/temp5.jpg" alt="Scalable Future Solutions">
+      </div>
+      <div class="feature-text">
+        <h3><strong>Scalable solutions for tomorrow</strong></h3>
+        <p>We design flexible systems that grow with you—equipping your business to adapt and thrive in a changing world.</p>
+      </div>
+      <div class="feature-arrow">
+        <a href="contests.html" class="arrow-btn" aria-label="Learn about Scalable Solutions">&rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 
@@ -337,51 +641,6 @@
   </div>
 </section>
 
-<section id="impact" class="py-5" style="background: linear-gradient(135deg, #eef5ff, #ffffff); position: relative;">
-  <div class="container" data-aos="fade-up">
-    <div class="text-center mb-5">
-      <h2 class="section-heading">Our Digital Footprint</h2>
-      <p class="section-subtext">A snapshot of the value we bring through innovation, precision, and partnership.</p>
-    </div>
-
-    <div class="row text-center g-4 justify-content-center">
-      
-      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
-        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
-          <i class="bi bi-folder2-open fs-2 text-info mb-3"></i>
-          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="50">0</span>+</h3>
-          <p class="text-muted mb-0">Completed Projects</p>
-        </div>
-      </div>
-
-      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
-          <i class="bi bi-geo-alt-fill fs-2 text-info mb-3"></i>
-          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="12">0</span></h3>
-          <p class="text-muted mb-0">Countries Served</p>
-        </div>
-      </div>
-
-      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
-        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
-          <i class="bi bi-clock-history fs-2 text-info mb-3"></i>
-          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="7">0</span>+</h3>
-          <p class="text-muted mb-0">Years of Excellence</p>
-        </div>
-      </div>
-
-      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
-        <div class="p-4 bg-white rounded-4 shadow-sm" style="backdrop-filter: blur(10px);">
-          <i class="bi bi-globe-americas fs-2 text-info mb-3"></i>
-          <h3 class="display-6 fw-bold text-dark"><span class="counter" data-target="25">0</span>+</h3>
-          <p class="text-muted mb-0">Global Reach</p>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
 
 
 
