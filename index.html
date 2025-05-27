@@ -497,20 +497,30 @@ color:black;
 <body>
 
 <section id="hero" style="position: relative; height: 100vh; overflow: hidden;">
-  <div id="vanta-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
-  <div id="vanta-gradient-overlay"></div>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <source src="assets/img/video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
+  <!-- Optional gradient overlay -->
+  <div id="vanta-gradient-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)); z-index: 0;"></div>
+
+  <!-- Foreground content -->
   <div class="hero-container" style="position: relative; z-index: 1;">
     <div class="hero-logo">
-      <img src="assets/img/logo.png" alt="Imperial"  data-aos="zoom-in" data-aos-delay="200">
+      <img src="assets/img/logo_white.png" alt="Imperial" data-aos="zoom-in" data-aos-delay="200">
     </div>
-    <h1 class="h1-hero pm"  data-aos="fade-up" data-aos-delay="400">Transform Your Business, Bring efficiency with digital technologies</h1>
+    <h1 class="h1-hero pm" data-aos="fade-up" data-aos-delay="400" style="color:white;">
+      Transform Your Business, Bring efficiency with digital technologies
+    </h1>
     <div class="actions" data-aos="fade-up" data-aos-delay="600">
       <a href="#about" class="btn-get-started">About Us</a>
-      <a href="#services" class="btn-services ms-3">Our Services</a>
+      <a href="#services" class="btn-services ms-3" style="border:1px solid white; color:black; background-color:white;">Our Services</a>
     </div>
   </div>
 </section>
+
 
 
 
@@ -556,7 +566,7 @@ color:black;
   </div>
 </section>
 
-<section class="video-highlight-section">
+<!-- <section class="video-highlight-section">
   <div class="container text-center">
     <h2 class="video-headline" data-aos="fade-up">
       <span style="color: black;">You can</span> unlock new opportunities
@@ -571,7 +581,7 @@ color:black;
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="feature-list-section">
@@ -904,7 +914,7 @@ color:black;
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
+<!--   <script>
     window.addEventListener('DOMContentLoaded', () => {
       VANTA.NET({
         el: "#vanta-bg",
@@ -918,7 +928,7 @@ color:black;
         gyroControls: false
       });
     });
-  </script>
+  </script> -->
 <script>
   const counters = document.querySelectorAll('.counter');
 
