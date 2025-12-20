@@ -620,6 +620,9 @@ section {
   margin-bottom: 0;
 }*/
 
+.about-content h4{
+  font-weight: 800;
+}
 .about-modern {
   background: linear-gradient(to right, #f7f9fc, #ffffff);
   padding: 100px 0;
@@ -1217,6 +1220,7 @@ section {
 .closed{
   color:#CB2308;
 }
+
 .project-list{
     margin-left: -33px !important;
 
@@ -1234,6 +1238,10 @@ section {
   background-color: darkgray;
   color:white;
 }
+.app-opened{
+  background-color: #E8634A;
+  color:white;
+}
 .pro-inprogress{
   background-color: lightgreen;
   color:white;
@@ -1248,6 +1256,10 @@ section {
 }
 .proimg2{
 width:72%;
+  border-radius: 15px;
+}
+.proimg3{
+width:75%;
   border-radius: 15px;
 }
 .text-black{
